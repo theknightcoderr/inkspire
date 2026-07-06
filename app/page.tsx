@@ -1,15 +1,20 @@
 import Link from "next/link";
+
+import Storycard from "@components/Storycard";
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#F8F6F1] text-[#2D2A26]">
 
  
 
       <section className="flex flex-col items-center justify-center text-center mt-32">
 
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-6xl font-bold ">
           Every story deserves a home 
         </h1>
+        <p className="mt-4 text-gray-600">
+        Stories have always brought strangers together.
+        </p>
 
        <h2 className="mt-8">
         This week's Reflection 
@@ -41,6 +46,11 @@ export default function Home() {
 
 <p className="mt-4 text-gray-600">Whether you arrive with a poem, a memory, a lesson, or a chapter of your life that has never been shared before, there will always be a place for it here. Welcome home.</p>
    </section>
+   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <Storycard />
+  <Storycard />
+  <Storycard />
+</div>
 
 
     </main>

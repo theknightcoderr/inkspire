@@ -1,18 +1,26 @@
 import Image from "next/image";
 
-export default function Storycard() {
+  interface StoryCardProps {
+    title: string;
+    preview: string;
+  }
+
+
+  export default function StoryCard({ title, preview }: StoryCardProps) {
   return (
-    <article className="rounded-lg shadow-md overflow-hidden bg-white">
+    <article className="overflow-hidden rounded-lg shadow-md bg-white">
       <Image
         src="/images/edinburgh-cafe.png"
         alt="A cozy morning café overlooking Edinburgh"
-        width={800}
-        height={500}
-        className="w-full h-48 object-cover"
+        width={200}
+        height={200}
+       className="w-full h-56 object-cover"
       />
+      
       <div className="p-6">
-        <h3 className="text-xl font-semibold">Story Title</h3>
-        <p className="mt-2 text-gray-600">Story preview...</p>
+      <h3>{title}</h3>
+
+<p>{preview}</p>
       </div>
     </article>
   );
